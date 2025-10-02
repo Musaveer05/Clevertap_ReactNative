@@ -12,16 +12,23 @@ import { View, Button, StyleSheet, Alert } from 'react-native';
 import CleverTap from 'clevertap-react-native';
 
 const App = () => {
-  CleverTap.setDebugLevel(2); 
+  CleverTap.setDebugLevel(2);
   useEffect(() => {
     CleverTap.createNotificationChannel(
-      "CtRNS", 
-      "CleverTap React Native Testing", 
-      "CT React Native Testing", 
-      5, 
-      true
+      'CtRNS',
+      'CleverTap React Native Testing',
+      'CT React Native Testing',
+      5,
+      true,
     );
 
+    CleverTap.addListener(
+      CleverTap.CleverTapPushNotificationClicked,
+      (event: Record<string, any>) => {
+        console.log('Push notification clicked:', event);
+        Alert.alert('Notification Clicked', JSON.stringify(event));
+      },
+    );
   }, []);
 
   const handlePushPress = () => {

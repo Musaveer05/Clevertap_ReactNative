@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
 
 <!-- Recommended so that CleverTap knows when to attempt a network call -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -29,10 +31,10 @@
 
        <meta-data
             android:name="CLEVERTAP_ACCOUNT_ID"
-            android:value="Your CleverTap React Ntaive Account ID"/>
+            android:value="TEST-98R-65Z-6K7Z"/>
         <meta-data
             android:name="CLEVERTAP_TOKEN"
-            android:value="Your Token"/>
+            android:value="TEST-156-2bc"/>
         <!-- IMPORTANT: To force use Google AD ID to uniquely identify  users, use the following meta tag. GDPR mandates that if you are using this tag, there is prominent disclousure to your end customer in their application. Read more about GDPR here - https://clevertap.com/blog/in-preparation-of-gdpr-compliance/ -->
 
         <meta-data
