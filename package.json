@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "@react-native/new-app-screen": "0.80.0",
-    "clevertap-react-native": "^3.5.0",
+    "clevertap-react-native": "3.7.0",
     "react": "19.1.0",
-    "react-native": "0.80.0",
+    "react-native": "0.74.7",
     "react-native-permissions": "^5.4.1"
   },
   "devDependencies": {

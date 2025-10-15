@@ -45,4 +45,11 @@ class MainActivity : ReactActivity() {
             Log.e("CleverTapEvent", "Failed to forward notification click: ${e.message}", e)
         }
     }
+
+   override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    CleverTapRnAPI.setInitialUri(intent?.data) // From v3.0.0+
+    }
+
+
 }
